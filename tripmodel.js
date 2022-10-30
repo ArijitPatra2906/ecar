@@ -4,10 +4,10 @@ const plugin = ({ widgets, simulator, vehicle }) => {
     tripCount.innerHTML = setInterval(Math.floor((Math.random() * 100)) + "km/hr", 3000)
     trip.setAttribute("style", `height: 100%; width: 100%;`)
     trip.innerHTML = (`
-    <div id="tripBox" style="max-width: fit-content; margin: 0 auto; position: relative;>
+    <div class="tripBox" style="max-width: fit-content; margin: 0 auto; position: relative;>
     <i class="fa-sharp fa-solid fa-location-dot"></i>
     <h3>Trip distance</h3>
-    <h5 id="tripcount"></h5>
+    <h5 style="text-align:center" class="tripcount"></h5>
 </div>
     `)
 
@@ -25,7 +25,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
     return {
         set_text: (text) => {
             if (boxGlobal !== null) {
-                trip.querySelector("#tripcount").textContent = text
+                trip.querySelector(".tripcount").textContent = text
             }
         }
     }
