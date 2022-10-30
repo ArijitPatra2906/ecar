@@ -37,7 +37,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
     return {
         set_text: (text) => {
             if (boxGlobal !== null) {
-                container.querySelector(".smartphone-text").textContent = text
+                trip.querySelector("#tripcount").textContent = text
             }
         }
     }
