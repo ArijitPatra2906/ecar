@@ -13,3 +13,4 @@ function count() {
     batteryCount.innerHTML = Math.floor((Math.random() * 100)) + "%"
     fuelCount.innerHTML = Math.floor((Math.random() * 100)) + "%"
 }
+
