@@ -2,7 +2,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
     const container = document.createElement("div")
     container.setAttribute("style", `height: 100%; width: 100%;`)
     container.innerHTML = (`
-    <div class="trip">
+    <div class="trip" style="max-width: fit-content; margin: 0 auto; position: relative;>
     <i class="fa-sharp fa-solid fa-location-dot"></i>
     <h6>Trip distance</h6>
     <h5 id="tripcount"></h5>
