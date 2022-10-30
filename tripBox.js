@@ -4,8 +4,8 @@ const plugin = ({ widgets, simulator, vehicle }) => {
     trip.innerHTML = (`
     <div id="tripBox" style="max-width: fit-content; margin: 0 auto; position: relative;>
     <i class="fa-sharp fa-solid fa-location-dot"></i>
-    <h6>Trip distance</h6>
-    <h5 id="tripcount"></h5>
+    <h3>Trip distance</h3>
+    <h5 id="tripcount">143KM</h5>
 </div>
     `)
 
@@ -17,10 +17,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
     setInterval(count, 3000);
 
     function count() {
-        // speedCount.innerHTML = Math.floor((Math.random() * 100)) + "km/hr"
         tripCount.innerHTML = Math.floor((Math.random() * 100)) + "km/hr"
-        // batteryCount.innerHTML = Math.floor((Math.random() * 100)) + "%"
-        // fuelCount.innerHTML = Math.floor((Math.random() * 100)) + "%"
     }
 
     let boxGlobal = null
@@ -33,7 +30,6 @@ const plugin = ({ widgets, simulator, vehicle }) => {
             // Deactivation function for clearing intervals or such.
         }
     })
-
     return {
         set_text: (text) => {
             if (boxGlobal !== null) {
@@ -44,3 +40,4 @@ const plugin = ({ widgets, simulator, vehicle }) => {
 }
 
 export default plugin
+
