@@ -11,7 +11,7 @@
 
 <body>
     <div id="loader-wrapper">
-        <div class="loader">
+        <div id="loader" class="loader">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
@@ -27,9 +27,17 @@
                 <div class="loader-circle-2"></div>
             </div>
             <div class="needle"></div>
-            <div class="loading">45KM/hr</div>
+            <div id="loading"></div>
         </div>
     </div>
+
+    <script>
+        setInterval(displaySpeed, 1000);
+
+        function displaySpeed() {
+            document.getElementById("loading").innerHTML + "48km/hr"
+        }
+    </script>
 </body>
 
 </html>
