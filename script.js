@@ -16,6 +16,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
     widgets.register("TRIP", (box) => {
         boxGlobal = box
         box.injectNode(trip)
+        box.injectNode(tripCount)
         return () => {
             boxGlobal = null
             // Deactivation function for clearing intervals or such.
