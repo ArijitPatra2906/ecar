@@ -1,5 +1,5 @@
 const plugin = ({ widgets, simulator, vehicle }) => {
-    const container = document.createElement("div")
+    const tripDistance = document.getElementById("tripcount")
     container.setAttribute("style", `height: 100%; width: 100%;`)
     container.innerHTML = (`
     <div class="trip" style="max-width: fit-content; margin: 0 auto; position: relative;>
@@ -30,7 +30,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
 
     widgets.register("TRIP", (box) => {
         boxGlobal = box
-        box.injectNode(container)
+        box.injectNode(tripDistance)
         return () => {
             boxGlobal = null
             // Deactivation function for clearing intervals or such.
