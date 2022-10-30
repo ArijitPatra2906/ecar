@@ -1,8 +1,8 @@
 const plugin = ({ widgets, simulator, vehicle }) => {
-    const tripDistance = document.getElementById("tripcount")
-    container.setAttribute("style", `height: 100%; width: 100%;`)
-    container.innerHTML = (`
-    <div class="trip" style="max-width: fit-content; margin: 0 auto; position: relative;>
+    const trip = document.getElementById("div")
+    trip.setAttribute("style", `height: 100%; width: 100%;`)
+    trip.innerHTML = (`
+    <div id="trip" style="max-width: fit-content; margin: 0 auto; position: relative;>
     <i class="fa-sharp fa-solid fa-location-dot"></i>
     <h6>Trip distance</h6>
     <h5 id="tripcount"></h5>
@@ -10,10 +10,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
     `)
 
 
-    // const speedCount = document.getElementById("speedcount")
     const tripCount = document.getElementById("tripcount")
-    // const batteryCount = document.getElementById("batterycount")
-    // const fuelCount = document.getElementById("fuelcount")
 
 
 
@@ -30,7 +27,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
 
     widgets.register("TRIP", (box) => {
         boxGlobal = box
-        box.injectNode(tripDistance)
+        box.injectNode(trip)
         return () => {
             boxGlobal = null
             // Deactivation function for clearing intervals or such.
